@@ -52,7 +52,6 @@ function main() {
     rock.addEventListener("click", () => {
         playerChoice = 'Rock';
         computerChoice = getComputerChoice();
-        console.log(computerChoice);
         gamePlay(playerChoice, computerChoice);
         rock.style.opacity = '0.5';
         setTimeout(() => {
@@ -63,7 +62,6 @@ function main() {
     paper.addEventListener("click", () => {
         playerChoice = 'Paper';
         computerChoice = getComputerChoice();
-        console.log(computerChoice);
         gamePlay(playerChoice, computerChoice);
         paper.style.opacity = '0.5';
         setTimeout(() => {
@@ -74,7 +72,6 @@ function main() {
     scissors.addEventListener("click", () => {
         playerChoice = 'Scissors';
         computerChoice = getComputerChoice();
-        console.log(computerChoice);
         gamePlay(playerChoice, computerChoice);
         scissors.style.opacity = '0.5';
         setTimeout(() => {
@@ -120,7 +117,6 @@ function gamePlay (player, computer) {
         // Decided the resut who win
         if (player === computer) {
             result = "It's Draw";
-            console.log("It's Tai");
         }
         else if (player === 'Rock' && computer === 'Scissors') {
             result = "Yehh! You win";
@@ -140,7 +136,6 @@ function gamePlay (player, computer) {
         }
         else {
             result = "Opps! You lose";
-            console.log("You win");
             computerScore ++;
             scoreComputer.innerHTML = `Player's Score :- ${computerScore}`;
         }
