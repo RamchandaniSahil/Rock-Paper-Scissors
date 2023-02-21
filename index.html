@@ -5,8 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>odin_Rock-Paper_scissors</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <nav>
+        <h1>Rock Paper Scissors</h1>
+    </nav>
+    <main>
+        <div class="haddings">
+            <h3>Choose Your Weapon</h3>
+            <h5>Best out of 5</h5>
+        </div>
+        <div class="container">
+            <h6 id="rounds">Round 1</h6>
+            <div class="gamePlay">
+                <div class="humanChoice border flexChoice">
+                    <p>PLAYER</p>
+                    <div class="button buttonMargin">
+                        <button class="btn mainDummyButtonStyle" id="rock">👊</button>
+                        <button class="btn mainDummyButtonStyle" id="paper">✋</button>
+                        <button class="btn mainDummyButtonStyle" id="scissors">✌</button>
+                    </div>
+                </div>
+                <div class="computerChoice border flexChoice">
+                    <P>COMPUTER</P>
+                    <div class="dummyButton buttonMargin">
+                        <div class="mainDummyButtonStyle" id="rockDiv">👊</div>
+                        <div class="mainDummyButtonStyle" id="paperDiv">✋</div>
+                        <div class="mainDummyButtonStyle" id="scissorsDiv">✌</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="results">
+            <div class="winningWritten">
+                <h2 id="winning">Congrulation! You won the game</h2>
+                <p id="para">Relode page to play one more time</p>
+                <p id="playerScore">Player's Score :- 0</p>
+                <p id="computerScore">Computer's Score :- 0</p>
+            </div>
+            <table>
+                <tr>
+                    <th>Round</th>
+                    <th>Player's Choice</th>
+                    <th>Computer's Choice</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>Round :- 1</td>
+                    <td id="playerRound1"></td>
+                    <td id="computerRound1"></td>
+                    <td id="resultRound1"></td>
+                </tr>
+                <tr>
+                    <td>Round :- 2</td>
+                    <td id="playerRound2"></td>
+                    <td id="computerRound2"></td>
+                    <td id="resultRound2"></td>
+                </tr>
+                <tr>
+                    <td>Round :- 3</td>
+                    <td id="playerRound3"></td>
+                    <td id="computerRound3"></td>
+                    <td id="resultRound3"></td>
+                </tr>
+                <tr>
+                    <td>Round :- 4</td>
+                    <td id="playerRound4"></td>
+                    <td id="computerRound4"></td>
+                    <td id="resultRound4"></td>
+                </tr>
+                <tr>
+                    <td>Round :- 5</td>
+                    <td id="playerRound5"></td>
+                    <td id="computerRound5"></td>
+                    <td id="resultRound5"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p><a href="https://github.com/RamchandaniSahil" target="_blank">Created by Sahil</a></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
