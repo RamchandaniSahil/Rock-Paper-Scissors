@@ -52,32 +52,41 @@ function main() {
     rock.addEventListener("click", () => {
         playerChoice = 'Rock';
         computerChoice = getComputerChoice();
-        gamePlay(playerChoice, computerChoice);
-        rock.style.opacity = '0.5';
-        setTimeout(() => {
-            rock.style.opacity = '1';
-        }, 500);
     });
 
     paper.addEventListener("click", () => {
         playerChoice = 'Paper';
         computerChoice = getComputerChoice();
         gamePlay(playerChoice, computerChoice);
-        paper.style.opacity = '0.5';
-        setTimeout(() => {
-            paper.style.opacity = '1';
-        }, 500);
     });
 
     scissors.addEventListener("click", () => {
         playerChoice = 'Scissors';
         computerChoice = getComputerChoice();
         gamePlay(playerChoice, computerChoice);
+    });
+}
+
+function playerHighlight () {
+    if (playerChoice === 'Rock') {
+        gamePlay(playerChoice, computerChoice);
+        rock.style.opacity = '0.5';
+        setTimeout(() => {
+            rock.style.opacity = '1';
+        }, 500);
+    }
+    else if (playerChoice === 'Paper') {
+        paper.style.opacity = '0.5';
+        setTimeout(() => {
+            paper.style.opacity = '1';
+        }, 500);
+    }
+    else if (playerChoice === 'Scissors') {
         scissors.style.opacity = '0.5';
         setTimeout(() => {
             scissors.style.opacity = '1';
         }, 500);
-    });
+    }
 }
 
 function computerHighlight () {
@@ -113,6 +122,7 @@ function gamePlay (player, computer) {
         round.style.display = 'block';
         round.innerHTML = `Round ${roundNum}`
         computerHighlight();
+        playerHighlight();
 
         // Decided the resut who win
         if (player === computer) {
