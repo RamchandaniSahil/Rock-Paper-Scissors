@@ -142,12 +142,12 @@ function gamePlay (player, computer) {
         else if (player === 'Scissors' && computer === 'Paper') {
             result = "Yehh! You win";
             playerScore ++;
-            scorePlayer.innerHTML = `Computer's Score :- ${playerScore}`;
+            scorePlayer.innerHTML = `Player's Score :- ${playerScore}`;
         }
         else {
             result = "Opps! You lose";
             computerScore ++;
-            scoreComputer.innerHTML = `Player's Score :- ${computerScore}`;
+            scoreComputer.innerHTML = `Computer's Score :- ${computerScore}`;
         }
         checkRound();
         updateTable();
